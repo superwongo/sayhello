@@ -12,7 +12,7 @@ import os
 
 from sayhello import app
 
-dev_db = 'sqlite:///' + os.path.join(os.path.dirname(app.root_path), 'data.db')
+dev_db = 'sqlite:///' + os.path.join(os.path.dirname(app.root_path), 'db.sqlite3')
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'secret string')
 SQLALCHEMY_TRACK_MODIFICATIONS = False
