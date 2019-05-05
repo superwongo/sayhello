@@ -23,4 +23,4 @@ app.jinja_env.lstrip_blocks = True
 db = SQLAlchemy(app)
 
 # 在末尾定义其他模块，可以避免在这些模块从构造文件中导入程序实例时循环依赖
-from sayhello import views, errors, commands, models
+from sayhello import views, errors, commands
