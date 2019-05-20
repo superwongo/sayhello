@@ -4,9 +4,15 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+faker = "*"
 
 [packages]
 flask = "*"
+flask-wtf = "*"
+flask-sqlalchemy = "*"
+bootstrap-flask = "*"
+flask-moment = "*"
+flask-debugtoolbar = "*"
 
 [requires]
 python_version = "3.6"

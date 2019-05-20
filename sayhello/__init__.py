@@ -10,6 +10,10 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_bootstrap import Bootstrap
+from flask_moment import Moment
+from flask_debugtoolbar import DebugToolbarExtension
+
 
 # 为了确保其他扩展或测试框架获得正确的路径值，以硬编码的形式写出包名称作为程序名称
 app = Flask(__name__.split('.')[0])
@@ -21,6 +25,12 @@ app.jinja_env.lstrip_blocks = True
 
 # 初始化flask_sqlalchemy
 db = SQLAlchemy(app)
+# 初始化flask_bootstrap
+bootstrap = Bootstrap(app)
+# 初始化flask_moment
+moment = Moment(app)
+# 初始化flask_debugtoolbar
+toolbar = DebugToolbarExtension(app)
 
 # 在末尾定义其他模块，可以避免在这些模块从构造文件中导入程序实例时循环依赖
 from sayhello import views, errors, commands
